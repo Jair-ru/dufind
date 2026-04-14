@@ -1,3 +1,4 @@
+<img width="1088" height="712" alt="image" src="https://github.com/user-attachments/assets/75911d84-41d3-4ada-9f93-598afcc6558f" />
 # 🔍 DuFind
 
 **Ultra-fast file search for Windows.**
