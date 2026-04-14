@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>DuFind</title>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">DuFind</div>
+
+      <div class="search-container">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Buscar arquivos..."
+          autofocus
+        />
+      </div>
+
+      <div class="actions">
+        <button id="btnReindex" title="Reindexar">⟳</button>
+        <button id="btnFavorites" title="Somente favoritos">★</button>
+      </div>
+    </header>
+
+    <!-- FILTROS -->
+    <section class="filters">
+      <select id="extensionFilter">
+        <option value="">Todas extensões</option>
+      </select>
+    </section>
+
+    <!-- STATUS -->
+    <section class="status">
+      <span id="statusText">Inicializando...</span>
+    </section>
+
+    <!-- RESULTADOS -->
+    <main id="results" class="results"></main>
+
+    <!-- TEMPLATE RESULT ITEM -->
+    <template id="resultTemplate">
+      <div class="result-item">
+
+        <div class="result-main">
+          <div class="result-name"></div>
+          <div class="result-path"></div>
+          <div class="result-preview"></div>
+        </div>
+
+        <div class="result-actions">
+          <button class="btn-open" title="Abrir">📂</button>
+          <button class="btn-folder" title="Abrir pasta">📁</button>
+          <button class="btn-reveal" title="Mostrar no Explorer">👁</button>
+          <button class="btn-copy" title="Copiar caminho">📋</button>
+          <button class="btn-fav" title="Favoritar">☆</button>
+        </div>
+
+      </div>
+    </template>
+
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

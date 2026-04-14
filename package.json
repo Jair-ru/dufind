@@ -1,0 +1,46 @@
+{
+  "name": "dufind",
+  "version": "1.0.0",
+  "description": "DuFind - Buscador de arquivos ultra rápido para Windows",
+  "main": "src/main.js",
+  "author": "Jair Cleiton Silva",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3"
+  },
+  "devDependencies": {
+    "electron": "^36.3.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.du.dufind",
+    "productName": "DuFind",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**/*",
+      "ui/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
